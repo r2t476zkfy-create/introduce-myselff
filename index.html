@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8f2">
+  <title>이서진 | 자기소개</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #493e50;
+      --muted: #817586;
+      --pink: #ff9fbd;
+      --coral: #ffb69f;
+      --yellow: #ffe49a;
+      --lavender: #d9c9ff;
+      --mint: #c9eee0;
+      --paper: #fffaf6;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: Pretendard, "Gowun Dodum", sans-serif;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(255, 207, 220, .58), transparent 25rem),
+        radial-gradient(circle at 92% 82%, rgba(214, 203, 255, .55), transparent 27rem),
+        linear-gradient(135deg, #fff9f2 0%, #fff4f5 52%, #f8f5ff 100%);
+      overflow-x: hidden;
+    }
+    .page { width: min(100% - 40px, 1020px); margin: 0 auto; padding: 34px 0 46px; }
+    .topline { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
+    .brand { font-size: 13px; font-weight: 800; letter-spacing: .13em; color: #9a8496; }
+    .pill { background: rgba(255,255,255,.72); border: 1px solid rgba(255,255,255,.9); border-radius: 999px; padding: 10px 16px; font-size: 12px; color: #927e91; box-shadow: 0 6px 20px rgba(120, 90, 120, .06); }
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      background: rgba(255,255,255,.78); border: 1px solid rgba(255,255,255,.95);
+      border-radius: 38px; padding: clamp(32px, 7vw, 76px);
+      box-shadow: 0 24px 70px rgba(135, 102, 130, .11);
+    }
+    .hero:before, .hero:after { content:""; position:absolute; z-index:-1; border-radius:50%; }
+    .hero:before { width: 310px; height:310px; right:-90px; top:-125px; background:linear-gradient(145deg, #ffe1e8, #ffd1b9); opacity:.85; }
+    .hero:after { width: 210px; height:210px; right:130px; bottom:-150px; background:linear-gradient(145deg, #e3d8ff, #d7f2e8); opacity:.9; }
+    .hero-grid { display:grid; grid-template-columns: 1fr 220px; gap: 30px; align-items:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border-radius:999px; background:#fff0f3; color:#c16e8b; font-size:12px; font-weight:700; letter-spacing:.04em; }
+    .eyebrow span { width:7px; height:7px; border-radius:50%; background:#ff91b2; box-shadow:0 0 0 4px #ffdce6; }
+    h1 { margin: 22px 0 12px; font-size: clamp(42px, 7vw, 70px); line-height:1.12; letter-spacing:-.065em; font-weight:800; }
+    h1 .name { color:#ed83a5; }
+    .intro { max-width:520px; margin:0; color:var(--muted); font-size: clamp(15px, 2vw, 18px); line-height:1.85; word-break:keep-all; }
+    .avatar { width:190px; height:190px; margin:auto; display:grid; place-items:center; border-radius: 42% 58% 54% 46% / 48% 42% 58% 52%; background:linear-gradient(145deg,#ffe2a8,#ffc1d1 55%,#d9caff); box-shadow: inset 0 0 0 9px rgba(255,255,255,.52), 0 18px 40px rgba(197,130,157,.18); transform:rotate(4deg); }
+    .avatar-inner { width:140px; height:140px; border-radius:50%; display:grid; place-items:center; background:rgba(255,255,255,.55); font-size:66px; transform:rotate(-4deg); }
+    .spark { position:absolute; color:#f3b84f; font-size:26px; }
+    .s1 { right:27%; top:22%; } .s2 { right:7%; bottom:24%; color:#c3a9f5; font-size:34px; }
+    .details { display:grid; grid-template-columns: repeat(3,1fr); gap:16px; margin:20px 0; }
+    .detail { padding:22px 23px; min-height:120px; border-radius:26px; background:rgba(255,255,255,.76); border:1px solid rgba(255,255,255,.9); box-shadow:0 12px 30px rgba(135,102,130,.06); }
+    .detail .label { color:#a294a4; font-size:12px; font-weight:700; letter-spacing:.08em; }
+    .detail .value { margin-top:12px; font-size:21px; font-weight:800; letter-spacing:-.04em; }
+    .detail .emoji { margin-right:7px; }
+    .bottom { display:grid; grid-template-columns:1.15fr .85fr; gap:16px; }
+    .panel { padding:27px 29px; background:rgba(255,255,255,.72); border:1px solid rgba(255,255,255,.9); border-radius:28px; box-shadow:0 12px 30px rgba(135,102,130,.06); }
+    h2 { margin:0 0 14px; font-size:18px; letter-spacing:-.04em; }
+    .panel p { margin:0; color:var(--muted); font-size:14px; line-height:1.85; word-break:keep-all; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .tag { padding:9px 13px; border-radius:999px; background:#fff0f3; color:#b66f89; font-size:12px; font-weight:700; }
+    .tag:nth-child(2) { background:#fff5d9; color:#a98743; }
+    .tag:nth-child(3) { background:#eaf8f1; color:#63977e; }
+    .tag:nth-child(4) { background:#f0ebff; color:#8975bd; }
+    footer { text-align:center; color:#aa9baa; font-size:12px; padding-top:28px; }
+    @media (max-width:700px) {
+      .page { width:min(100% - 24px, 560px); padding-top:20px; }
+      .hero { border-radius:30px; padding:32px 25px; }
+      .hero-grid { grid-template-columns:1fr; text-align:center; }
+      .avatar { grid-row:1; width:145px; height:145px; }
+      .avatar-inner { width:108px; height:108px; font-size:50px; }
+      .intro { margin:auto; }
+      .details { grid-template-columns:1fr; gap:10px; }
+      .detail { min-height:unset; padding:17px 20px; display:flex; justify-content:space-between; align-items:center; }
+      .detail .value { margin:0; }
+      .bottom { grid-template-columns:1fr; }
+      .s1 { right:14%; top:11%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topline">
+      <div class="brand">MY LITTLE PAGE ✿</div>
+      <div class="pill">HELLO, NICE TO MEET YOU!</div>
+    </div>
+
+    <section class="hero">
+      <span class="spark s1">✦</span><span class="spark s2">✳</span>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span></span> ABOUT ME</div>
+          <h1>안녕하세요,<br><span class="name">이서진</span>입니다!</h1>
+          <p class="intro">작은 호기심을 소중히 여기고, 새로운 경험 속에서 한 걸음씩 성장하고 있는 대학생입니다. 반가워요! 🌷</p>
+        </div>
+        <div class="avatar" aria-label="웃는 꽃 일러스트"><div class="avatar-inner">🌼</div></div>
+      </div>
+    </section>
+
+    <section class="details" aria-label="기본 정보">
+      <div class="detail"><div class="label">NAME</div><div class="value"><span class="emoji">🧸</span>이서진</div></div>
+      <div class="detail"><div class="label">AGE</div><div class="value"><span class="emoji">🎂</span>23살</div></div>
+      <div class="detail"><div class="label">NOW</div><div class="value"><span class="emoji">🎓</span>대학생</div></div>
+    </section>
+
+    <section class="bottom">
+      <div class="panel">
+        <h2>조금 더 알아가기 💌</h2>
+        <p>매일의 일상 속에서 새로운 배움을 발견하고, 다양한 사람들과 좋은 에너지를 나누는 것을 좋아해요. 오늘보다 내일 조금 더 성장하는 사람이 되고 싶습니다.</p>
+      </div>
+      <div class="panel">
+        <h2>MY KEYWORDS</h2>
+        <p>저를 표현하는 네 가지 키워드예요.</p>
+        <div class="tags">
+          <span class="tag">긍정 에너지</span>
+          <span class="tag">호기심</span>
+          <span class="tag">성장</span>
+          <span class="tag">새로운 도전</span>
+        </div>
+      </div>
+    </section>
+    <footer>Made with ☀️ & a little bit of sparkle · 2026</footer>
+  </main>
+</body>
+</html>
